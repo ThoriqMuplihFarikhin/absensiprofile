@@ -1,58 +1,531 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+#  AbsensiProfile  
+### Sistem Absensi Karyawan Berbasis GPS Geofencing & QR Code
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<a href="#">
+    <img src="https://img.shields.io/badge/Laravel-13-red?style=for-the-badge&logo=laravel" alt="Laravel">
+</a>
+<a href="#">
+    <img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" alt="React">
+</a>
+<a href="#">
+    <img src="https://img.shields.io/badge/Inertia.js-purple?style=for-the-badge" alt="Inertia">
+</a>
+<a href="#">
+    <img src="https://img.shields.io/badge/TailwindCSS-4-cyan?style=for-the-badge&logo=tailwindcss" alt="Tailwind">
+</a>
+<a href="#">
+    <img src="https://img.shields.io/badge/Leaflet-GPS-green?style=for-the-badge" alt="Leaflet">
+</a>
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+AbsensiProfile adalah aplikasi absensi modern berbasis web yang dibuat menggunakan Laravel 13 dan React Inertia.  
+Sistem ini mendukung absensi berbasis GPS Geofencing realtime, QR Code Attendance, Employee Management, Dashboard Analytics, dan monitoring lokasi karyawan.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran karyawan secara realtime, modern, dan efisien.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+> [!IMPORTANT]
+>
+> Sistem mendukung:
+>
+> - GPS Geofencing Realtime
+> - QR Attendance
+> - Dashboard Analytics
+> - Employee Management
+> - Responsive Modern UI
+> - Attendance Validation by Radius
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#  Fitur Utama
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+##  Authentication
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- Login
+- Register
+- Logout
+- Role Management
+- Session Authentication
 
-## Agentic Development
+---
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+##  Dashboard Analytics
+
+- Statistik Kehadiran
+- Statistik Karyawan
+- Grafik Kehadiran
+- Realtime Dashboard
+- Monitoring Activity
+
+---
+
+##  Employee Management
+
+- Tambah Karyawan
+- Edit Karyawan
+- Hapus Karyawan
+- Data Employee
+- Employee Detail
+
+---
+
+##  GPS Geofencing
+
+- Live GPS Tracking
+- Validasi Radius Kantor
+- Dynamic Radius
+- Realtime Geolocation
+- Tracking Lokasi Employee
+- Office Radius Detection
+
+---
+
+##  QR Attendance
+
+- QR Generator
+- QR Scanner
+- QR Check In
+- QR Attendance Validation
+
+---
+
+##  Attendance System
+
+- Check In
+- Check Out
+- Attendance History
+- Attendance Export
+- Daily Attendance
+
+---
+
+##  Modern UI
+
+- Responsive Design
+- Mobile Friendly
+- Modern Dashboard
+- Dark Clean Interface
+- Professional HR UI
+
+---
+
+#  Framework dan Library Yang Digunakan
+
+## Backend
+
+- Laravel 13
+- PHP 8.3
+- MySQL
+
+---
+
+## Frontend
+
+- React
+- Inertia.js
+- Tailwind CSS
+- Vite
+
+---
+
+## Maps & GPS
+
+- Leaflet.js
+- React Leaflet
+- OpenStreetMap
+- Browser Geolocation API
+
+---
+
+## Library Tambahan
+
+- Axios
+- Lucide React
+- React Icons
+
+---
+
+#  Cara Penggunaan
+
+# A. Persyaratan
+
+Sebelum menjalankan project, pastikan perangkat sudah memiliki:
+
+- PHP 8.3+
+- Composer
+- Node.js
+- NPM
+- MySQL / MariaDB
+- Git
+
+---
+
+# B. Instalasi
+
+## 1. Clone Repository
 
 ```bash
-composer require laravel/boost --dev
+git clone https://github.com/username/absensiprofile.git
 
-php artisan boost:install
+## 2. Masuk Folder Project
+
+```bash
+cd absensiprofile
+
+## 3. Install Dependency
+
+```bash
+composer install
+npm install
+
+## 4. Setup Environment
+
+```bash
+cp .env.example .env
+
+## 5. Generate App Key
+
+```bash
+php artisan key:generate
+
+## 6. Konfigurasi Database
+
+```.env
+APP_NAME=AbsensiProfile
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://127.0.0.1:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=absensiprofile
+DB_USERNAME=root
+DB_PASSWORD=
+
+## 7. Jalankan Migration
+
+```bash
+php artisan migrate
+
+## 8. Jalankan Seeder
+
+```bash
+php artisan db:seed
+
+## 9. Jalankan Server
+
+```bash
+php artisan serve
+
+## Vite
+
+```bash
+npm run dev
+
+## 10. Akses Aplikasi
+
+```
+http://127.0.0.1:8000
+
+# C. Daftar Roles
+
+| Role | Akses |
+|------|--------|
+| Admin | Mengelola seluruh sistem |
+| Employee | Melakukan absensi dan melihat dashboard |
+
+---
+
+# D. Import Data dari CSV
+
+Admin dapat melakukan import employee menggunakan file CSV.
+
+## Format CSV
+
+```csv
+name,email,position
+John Doe,john@example.com,Staff
+Jane Doe,jane@example.com,Manager
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+---
 
-## Contributing
+## Langkah Import CSV
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Login sebagai Admin
+2. Masuk menu Employee
+3. Klik Import CSV
+4. Upload file CSV
+5. Data otomatis tersimpan
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+#  Konfigurasi
 
-## Security Vulnerabilities
+##  GPS Radius
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Radius kantor dapat diubah melalui menu:
 
-## License
+```txt
+Admin > GPS Geofencing
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+##  Office Location
+
+Lokasi kantor dapat dipindahkan secara realtime melalui map GPS.
+
+---
+
+##  Environment
+
+Konfigurasi utama berada pada file:
+
+```txt
+.env
+```
+
+---
+
+##  Database Seeder
+
+Seeder digunakan untuk membuat data awal aplikasi.
+
+Jalankan perintah berikut:
+
+```bash
+php artisan db:seed
+```
+
+Atau refresh database sekaligus seed:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+---
+
+##  Default Login Admin
+
+```txt
+Email    : admin@gmail.com
+Password : password123
+```
+
+---
+
+##  Struktur Database
+
+Database utama:
+
+```txt
+absensiprofile
+```
+
+Tabel utama:
+
+- users
+- employees
+- attendances
+- geofences
+- devices
+- qr_codes
+- attendance_histories
+
+---
+
+##  Vite Development Server
+
+```bash
+npm run dev
+```
+
+---
+
+##  Laravel Server
+
+```bash
+php artisan serve
+```
+
+---
+
+---
+
+#  Scheduler Otomatis
+
+AbsensiProfile mendukung fitur scheduler otomatis untuk melakukan proses tertentu secara realtime tanpa harus dijalankan manual oleh admin.
+
+Fitur scheduler ini digunakan untuk:
+
+- Auto Check-Out Karyawan
+- Reset Attendance Harian
+- Update Status Kehadiran
+- Monitoring Karyawan Terlambat
+- Auto Generate Attendance Report
+
+---
+
+##  Cara Kerja Scheduler
+
+Scheduler Laravel berjalan menggunakan command:
+
+```bash
+php artisan schedule:run
+```
+
+Command tersebut akan menjalankan task otomatis yang sudah didaftarkan pada:
+
+```txt
+routes/console.php
+```
+
+---
+
+##  Contoh Scheduler Auto Check-Out
+
+Contoh implementasi auto check-out karyawan:
+
+```php
+use Illuminate\Support\Facades\Schedule;
+
+Schedule::call(function () {
+
+    \App\Models\Attendance::whereDate('created_at', today())
+        ->whereNull('check_out')
+        ->update([
+            'check_out' => now(),
+        ]);
+
+})->everyMinute();
+```
+
+---
+
+##  Jadwal Scheduler
+
+| Scheduler | Fungsi |
+|-----------|---------|
+| everyMinute() | Menjalankan setiap menit |
+| hourly() | Menjalankan setiap jam |
+| daily() | Menjalankan setiap hari |
+| weekly() | Menjalankan setiap minggu |
+
+---
+
+##  Menjalankan Scheduler
+
+### Manual
+
+```bash
+php artisan schedule:run
+```
+
+---
+
+### Realtime Mode
+
+```bash
+php artisan schedule:work
+```
+
+---
+
+##  Scheduler pada Windows
+
+Jika menggunakan Windows, scheduler dapat dijalankan menggunakan:
+
+```bash
+php artisan schedule:work
+```
+
+Biarkan terminal tetap aktif agar scheduler berjalan realtime.
+
+---
+
+##  Scheduler pada Linux / Hosting
+
+Tambahkan cron job:
+
+```bash
+* * * * * php /path-to-project/artisan schedule:run >> /dev/null 2>&1
+```
+
+---
+
+##  Fitur Scheduler di AbsensiProfile
+
+- Auto Check-Out
+- Auto Attendance Monitoring
+- Auto Daily Attendance Reset
+- Auto Employee Activity Update
+- Auto Attendance Recap
+
+---
+
+##  Auto Check-Out System
+
+Jika karyawan lupa melakukan check-out, sistem akan otomatis melakukan check-out berdasarkan jam kerja yang telah ditentukan admin.
+
+Contoh:
+
+```txt
+Jam Pulang : 17:00
+Auto Checkout : 17:05
+```
+
+---
+
+##  Keuntungan Scheduler
+
+- Mengurangi human error
+- Attendance lebih realtime
+- Monitoring lebih otomatis
+- Menghemat pekerjaan admin
+- Sistem berjalan otomatis
+
+---
+
+#  Kesimpulan
+
+AbsensiProfile adalah aplikasi absensi modern berbasis Laravel dan React yang dirancang untuk membantu perusahaan melakukan monitoring kehadiran secara realtime.
+
+Dengan dukungan GPS Geofencing, QR Attendance, Dashboard Analytics, dan UI modern, sistem ini dapat digunakan sebagai solusi absensi digital berbasis web yang efisien dan professional.
+
+Project ini juga dapat dikembangkan lebih lanjut menjadi:
+
+- Face Recognition Attendance
+- Mobile App Attendance
+- Multi Branch Office
+- Live Employee Tracking
+- AI Attendance Monitoring
+
+---
+
+#  Contributing
+
+Kontribusi terbuka untuk pengembangan project ini.
+
+Jika menemukan bug atau memiliki ide pengembangan:
+
+- Fork repository
+- Create new branch
+- Commit changes
+- Open Pull Request
+
+---
+
+#  Developer
+
+Developed by:
+
+### Thoriq Mplh
+
+---
+
+#  License
+
+This project is licensed under the MIT License.
