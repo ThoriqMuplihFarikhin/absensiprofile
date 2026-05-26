@@ -19,27 +19,32 @@
 
 ---
 
-AbsensiProfile adalah aplikasi absensi modern berbasis web yang dibuat menggunakan Laravel 13 dan React Inertia.  
-Sistem ini mendukung absensi berbasis GPS Geofencing realtime, QR Code Attendance, Employee Management, Dashboard Analytics, dan monitoring lokasi karyawan.
+##  Preview
 
-Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran karyawan secara realtime, modern, dan efisien.
-
-> [!IMPORTANT]
->
-> Sistem mendukung:
->
-> - GPS Geofencing Realtime
-> - QR Attendance
-> - Dashboard Analytics
-> - Employee Management
-> - Responsive Modern UI
-> - Attendance Validation by Radius
+![Dashboard](./screenshots/dashboard-preview)
 
 ---
 
-#  Fitur Utama
+## 📌 Tentang Project
 
-##  Authentication
+AbsensiProfile adalah aplikasi absensi modern berbasis web yang dibuat menggunakan Laravel 13 dan React Inertia.
+
+Sistem ini mendukung:
+
+- GPS Geofencing Realtime
+- QR Attendance
+- Dashboard Analytics
+- Employee Management
+- Responsive Modern UI
+- Attendance Validation by Radius
+
+Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran karyawan secara realtime, modern, dan efisien.
+
+---
+
+# ✨ Fitur Utama
+
+## 🔐 Authentication
 
 - Login
 - Register
@@ -49,7 +54,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-##  Dashboard Analytics
+## 📊 Dashboard Analytics
 
 - Statistik Kehadiran
 - Statistik Karyawan
@@ -59,7 +64,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-##  Employee Management
+## 👨‍💼 Employee Management
 
 - Tambah Karyawan
 - Edit Karyawan
@@ -69,7 +74,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-##  GPS Geofencing
+## 📍 GPS Geofencing
 
 - Live GPS Tracking
 - Validasi Radius Kantor
@@ -80,7 +85,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-##  QR Attendance
+## 📷 QR Attendance
 
 - QR Generator
 - QR Scanner
@@ -89,7 +94,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-##  Attendance System
+## 📅 Attendance System
 
 - Check In
 - Check Out
@@ -99,17 +104,26 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-##  Modern UI
+## ⏰ Scheduler Otomatis
+
+- Auto Check-Out
+- Auto Attendance Monitoring
+- Auto Daily Reset
+- Auto Attendance Recap
+
+---
+
+## 🎨 Modern UI
 
 - Responsive Design
 - Mobile Friendly
 - Modern Dashboard
-- Dark Clean Interface
 - Professional HR UI
+- Dark Clean Interface
 
 ---
 
-#  Framework dan Library Yang Digunakan
+# 🛠️ Framework dan Library Yang Digunakan
 
 ## Backend
 
@@ -145,7 +159,57 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-#  Cara Penggunaan
+# 📸 Dokumentasi
+
+## 🏠 Landing Page
+
+Landing page modern dengan tampilan professional company.
+
+![Landing Page](./screenshots/landing-page.png)
+
+---
+
+## 🔐 Login Page
+
+Halaman login modern dengan UI professional.
+
+![Login](./screenshots/login-page.png)
+
+---
+
+## 📊 Dashboard Admin
+
+Dashboard analytics untuk monitoring absensi dan employee.
+
+![Dashboard](./screenshots/dashboard-admin.png)
+
+---
+
+## 📍 GPS Geofencing
+
+Sistem validasi absensi menggunakan GPS realtime dan radius kantor.
+
+![GPS](./screenshots/geofencing.png)
+
+---
+
+## 👨‍💼 Employee Management
+
+Manajemen data karyawan realtime.
+
+![Employee](./screenshots/employees.png)
+
+---
+
+## 📷 QR Attendance
+
+QR Code scanner untuk proses absensi.
+
+![QR Attendance](./screenshots/qr-attendance.png)
+
+---
+
+# 📖 Cara Penggunaan
 
 # A. Persyaratan
 
@@ -166,31 +230,48 @@ Sebelum menjalankan project, pastikan perangkat sudah memiliki:
 
 ```bash
 git clone https://github.com/username/absensiprofile.git
+```
+
+---
 
 ## 2. Masuk Folder Project
 
 ```bash
 cd absensiprofile
+```
+
+---
 
 ## 3. Install Dependency
 
 ```bash
 composer install
 npm install
+```
+
+---
 
 ## 4. Setup Environment
 
 ```bash
 cp .env.example .env
+```
+
+---
 
 ## 5. Generate App Key
 
 ```bash
 php artisan key:generate
+```
+
+---
 
 ## 6. Konfigurasi Database
 
-```.env
+Edit file `.env`
+
+```env
 APP_NAME=AbsensiProfile
 APP_ENV=local
 APP_KEY=
@@ -203,33 +284,57 @@ DB_PORT=3306
 DB_DATABASE=absensiprofile
 DB_USERNAME=root
 DB_PASSWORD=
+```
+
+---
 
 ## 7. Jalankan Migration
 
 ```bash
 php artisan migrate
+```
+
+---
 
 ## 8. Jalankan Seeder
 
 ```bash
 php artisan db:seed
+```
 
-## 9. Jalankan Server
+Atau refresh database sekaligus seed:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+---
+
+## 9. Jalankan Laravel Server
 
 ```bash
 php artisan serve
+```
 
-## Vite
+---
+
+## 10. Jalankan Vite
 
 ```bash
 npm run dev
-
-## 10. Akses Aplikasi
-
 ```
-http://127.0.0.1:8000
 
-# C. Daftar Roles
+---
+
+## 11. Akses Aplikasi
+
+```txt
+http://127.0.0.1:8000
+```
+
+---
+
+# 👥 Daftar Roles
 
 | Role | Akses |
 |------|--------|
@@ -238,7 +343,7 @@ http://127.0.0.1:8000
 
 ---
 
-# D. Import Data dari CSV
+# 📂 Import Data dari CSV
 
 Admin dapat melakukan import employee menggunakan file CSV.
 
@@ -262,9 +367,9 @@ Jane Doe,jane@example.com,Manager
 
 ---
 
-#  Konfigurasi
+# ⚙️ Konfigurasi
 
-##  GPS Radius
+## 📍 GPS Radius
 
 Radius kantor dapat diubah melalui menu:
 
@@ -274,13 +379,13 @@ Admin > GPS Geofencing
 
 ---
 
-##  Office Location
+## 🗺️ Office Location
 
 Lokasi kantor dapat dipindahkan secara realtime melalui map GPS.
 
 ---
 
-##  Environment
+## ⚙️ Environment
 
 Konfigurasi utama berada pada file:
 
@@ -290,25 +395,11 @@ Konfigurasi utama berada pada file:
 
 ---
 
-##  Database Seeder
+# 🗄️ Database Seeder
 
 Seeder digunakan untuk membuat data awal aplikasi.
 
-Jalankan perintah berikut:
-
-```bash
-php artisan db:seed
-```
-
-Atau refresh database sekaligus seed:
-
-```bash
-php artisan migrate:fresh --seed
-```
-
----
-
-##  Default Login Admin
+## Default Login Admin
 
 ```txt
 Email    : admin@gmail.com
@@ -317,7 +408,7 @@ Password : password123
 
 ---
 
-##  Struktur Database
+## Struktur Database
 
 Database utama:
 
@@ -337,86 +428,23 @@ Tabel utama:
 
 ---
 
-##  Vite Development Server
+# ⏰ Scheduler Otomatis
 
-```bash
-npm run dev
-```
+AbsensiProfile mendukung fitur scheduler otomatis untuk menjalankan proses tertentu secara realtime tanpa harus dijalankan manual.
 
 ---
 
-##  Laravel Server
+## Fungsi Scheduler
 
-```bash
-php artisan serve
-```
-
----
-
----
-
-#  Scheduler Otomatis
-
-AbsensiProfile mendukung fitur scheduler otomatis untuk melakukan proses tertentu secara realtime tanpa harus dijalankan manual oleh admin.
-
-Fitur scheduler ini digunakan untuk:
-
-- Auto Check-Out Karyawan
+- Auto Check-Out
 - Reset Attendance Harian
 - Update Status Kehadiran
-- Monitoring Karyawan Terlambat
-- Auto Generate Attendance Report
+- Attendance Monitoring
+- Generate Attendance Recap
 
 ---
 
-##  Cara Kerja Scheduler
-
-Scheduler Laravel berjalan menggunakan command:
-
-```bash
-php artisan schedule:run
-```
-
-Command tersebut akan menjalankan task otomatis yang sudah didaftarkan pada:
-
-```txt
-routes/console.php
-```
-
----
-
-##  Contoh Scheduler Auto Check-Out
-
-Contoh implementasi auto check-out karyawan:
-
-```php
-use Illuminate\Support\Facades\Schedule;
-
-Schedule::call(function () {
-
-    \App\Models\Attendance::whereDate('created_at', today())
-        ->whereNull('check_out')
-        ->update([
-            'check_out' => now(),
-        ]);
-
-})->everyMinute();
-```
-
----
-
-##  Jadwal Scheduler
-
-| Scheduler | Fungsi |
-|-----------|---------|
-| everyMinute() | Menjalankan setiap menit |
-| hourly() | Menjalankan setiap jam |
-| daily() | Menjalankan setiap hari |
-| weekly() | Menjalankan setiap minggu |
-
----
-
-##  Menjalankan Scheduler
+## Menjalankan Scheduler
 
 ### Manual
 
@@ -434,19 +462,7 @@ php artisan schedule:work
 
 ---
 
-##  Scheduler pada Windows
-
-Jika menggunakan Windows, scheduler dapat dijalankan menggunakan:
-
-```bash
-php artisan schedule:work
-```
-
-Biarkan terminal tetap aktif agar scheduler berjalan realtime.
-
----
-
-##  Scheduler pada Linux / Hosting
+## Scheduler Linux / Hosting
 
 Tambahkan cron job:
 
@@ -456,40 +472,39 @@ Tambahkan cron job:
 
 ---
 
-##  Fitur Scheduler di AbsensiProfile
+## Contoh Scheduler Auto Checkout
 
-- Auto Check-Out
-- Auto Attendance Monitoring
-- Auto Daily Attendance Reset
-- Auto Employee Activity Update
-- Auto Attendance Recap
+```php
+use Illuminate\Support\Facades\Schedule;
 
----
+Schedule::call(function () {
 
-##  Auto Check-Out System
+    \App\Models\Attendance::whereDate('created_at', today())
+        ->whereNull('check_out')
+        ->update([
+            'check_out' => now(),
+        ]);
 
-Jika karyawan lupa melakukan check-out, sistem akan otomatis melakukan check-out berdasarkan jam kerja yang telah ditentukan admin.
-
-Contoh:
-
-```txt
-Jam Pulang : 17:00
-Auto Checkout : 17:05
+})->everyMinute();
 ```
 
 ---
 
-##  Keuntungan Scheduler
+# 📊 Feature Status
 
-- Mengurangi human error
-- Attendance lebih realtime
-- Monitoring lebih otomatis
-- Menghemat pekerjaan admin
-- Sistem berjalan otomatis
+| Feature | Status |
+|----------|--------|
+| GPS Geofencing | ✅ |
+| QR Attendance | ✅ |
+| Dashboard Analytics | ✅ |
+| Employee Management | ✅ |
+| Scheduler Otomatis | ✅ |
+| CSV Import | ✅ |
+| Responsive UI | ✅ |
 
 ---
 
-#  Kesimpulan
+# 📌 Kesimpulan
 
 AbsensiProfile adalah aplikasi absensi modern berbasis Laravel dan React yang dirancang untuk membantu perusahaan melakukan monitoring kehadiran secara realtime.
 
@@ -505,20 +520,20 @@ Project ini juga dapat dikembangkan lebih lanjut menjadi:
 
 ---
 
-#  Contributing
+# 🤝 Contributing
 
 Kontribusi terbuka untuk pengembangan project ini.
 
 Jika menemukan bug atau memiliki ide pengembangan:
 
-- Fork repository
-- Create new branch
-- Commit changes
-- Open Pull Request
+1. Fork repository
+2. Create new branch
+3. Commit changes
+4. Open Pull Request
 
 ---
 
-#  Developer
+# 👨‍💻 Developer
 
 Developed by:
 
@@ -526,6 +541,10 @@ Developed by:
 
 ---
 
-#  License
+# 📄 License
 
 This project is licensed under the MIT License.
+
+---
+
+⭐ Jangan lupa beri star jika project ini membantu.
