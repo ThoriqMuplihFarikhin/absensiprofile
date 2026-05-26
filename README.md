@@ -19,8 +19,6 @@
 
 ---
 
-![Preview](./screenshots/dashboard-preview.png)
-
 AbsensiProfile adalah aplikasi absensi modern berbasis web yang dibuat menggunakan Laravel 13 dan React Inertia.  
 Sistem ini mendukung absensi berbasis GPS Geofencing realtime, QR Code Attendance, Employee Management, Dashboard Analytics, dan monitoring lokasi karyawan.
 
@@ -82,7 +80,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-## 📷 QR Attendance
+##  QR Attendance
 
 - QR Generator
 - QR Scanner
