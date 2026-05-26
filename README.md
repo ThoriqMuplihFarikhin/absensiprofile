@@ -1,4 +1,4 @@
-<img width="1365" height="682" alt="Screenshot 2026-05-26 220318" src="https://github.com/user-attachments/assets/289e20f6-07db-4e8a-96ee-19d107ea8a27" /># 🚀 AbsensiProfile  
+#  AbsensiProfile  
 ### Sistem Absensi Karyawan Berbasis GPS Geofencing & QR Code
 
 <a href="#">
@@ -19,10 +19,9 @@
 
 ---
 
-## 📸 Preview
+##  Preview
 
-![Dashboard](<img width="1131" height="585" alt="Screenshot 2026-05-26 221020" src="https://github.com/user-attachments/assets/6bec0e27-b861-4c72-b287-94c8413f5736" />
-)
+![Dashboard](./screenshots/dashboard-preview)
 
 ---
 
@@ -166,8 +165,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 Landing page modern dengan tampilan professional company.
 
-![Landing Page](<img width="1365" height="682" alt="Screenshot 2026-05-26 220318" src="https://github.com/user-attachments/assets/45a5ef1e-0ba8-44e1-9ca9-279677df2802" />
-)
+![Landing Page](./screenshots/landing-page.png)
 
 ---
 
@@ -175,8 +173,7 @@ Landing page modern dengan tampilan professional company.
 
 Halaman login modern dengan UI professional.
 
-![Login](<img width="1365" height="683" alt="Screenshot 2026-05-26 220337" src="https://github.com/user-attachments/assets/6a47cbe3-3f49-4a19-9fd6-9f87e6b3b139" />
-)
+![Login](./screenshots/login-page.png)
 
 ---
 
@@ -184,8 +181,7 @@ Halaman login modern dengan UI professional.
 
 Dashboard analytics untuk monitoring absensi dan employee.
 
-![Dashboard](<img width="1360" height="684" alt="Screenshot 2026-05-26 215057" src="https://github.com/user-attachments/assets/6992ff6d-5081-4527-906a-fbf070afd400" />
-)
+![Dashboard](./screenshots/dashboard-admin.png)
 
 ---
 
@@ -193,8 +189,7 @@ Dashboard analytics untuk monitoring absensi dan employee.
 
 Sistem validasi absensi menggunakan GPS realtime dan radius kantor.
 
-![GPS](<img width="1365" height="682" alt="Screenshot 2026-05-26 215246" src="https://github.com/user-attachments/assets/9dfdd4da-5673-45f6-9af4-6ffcb840658f" />
-)
+![GPS](./screenshots/geofencing.png)
 
 ---
 
@@ -202,8 +197,7 @@ Sistem validasi absensi menggunakan GPS realtime dan radius kantor.
 
 Manajemen data karyawan realtime.
 
-![Employee](<img width="1365" height="682" alt="Screenshot 2026-05-26 215157" src="https://github.com/user-attachments/assets/e34deb82-1ae7-47fe-b2b2-bb31f6694226" />
-)
+![Employee](./screenshots/employees.png)
 
 ---
 
@@ -211,8 +205,7 @@ Manajemen data karyawan realtime.
 
 QR Code scanner untuk proses absensi.
 
-![QR Attendance](<img width="1365" height="687" alt="Screenshot 2026-05-26 215457" src="https://github.com/user-attachments/assets/acbc41b0-77c4-4046-93be-fa85b8f03693" />
-)
+![QR Attendance](./screenshots/qr-attendance.png)
 
 ---
 
