@@ -21,7 +21,7 @@
 
 ##  Preview
 
-![Dashboard](./screenshots/dashboard-preview)
+![Dashboard](public/screenshots/dashboard-preview.png)
 
 ---
 
