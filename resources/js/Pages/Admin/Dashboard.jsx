@@ -1,15 +1,23 @@
 import AdminLayout from "@/Layouts/AdminLayout";
-import { router } from "@inertiajs/react";
+import { router, usePage } from "@inertiajs/react";
 import { Users, Clock3, Calendar, MapPin } from "lucide-react";
-import {
-    ResponsiveContainer,
-    AreaChart,
-    Area,
-    XAxis,
-    Tooltip,
-} from "recharts";
+import { ResponsiveContainer, AreaChart, Area, XAxis, Tooltip } from "recharts";
+import { MapContainer, TileLayer, Circle, Marker, Popup } from "react-leaflet";
+import { useEffect, useState } from "react";
+import "leaflet/dist/leaflet.css";
+import L from "leaflet";
 
-export default function Dashboard({ stats, attendance, weeklyChart }) {
+// Fix leaflet icon bug
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
+    iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
+    shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
+});
+
+export default function Dashboard({ stats, attendance, weeklyChart, geofence }) {
+    const { props } = usePage();
+    const [processing, setProcessing] = useState(false);
 
     const statCards = [
         { title: "Total Employees", value: stats?.employees ?? 0, icon: Users, color: "bg-blue-100 text-blue-600" },
@@ -27,8 +35,54 @@ export default function Dashboard({ stats, attendance, weeklyChart }) {
         return map[status] ?? "bg-gray-100 text-gray-600";
     };
 
+    const handleCheckIn = () => {
+        setProcessing(true);
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                    router.post(route("admin.check-in"), {
+                        latitude: pos.coords.latitude,
+                        longitude: pos.coords.longitude,
+                    }, { onFinish: () => setProcessing(false) });
+                },
+                () => {
+                    router.post(route("admin.check-in"), {}, 
+                        { onFinish: () => setProcessing(false) }
+                    );
+                }
+            );
+        } else {
+            router.post(route("admin.check-in"), {}, 
+                { onFinish: () => setProcessing(false) }
+            );
+        }
+    };
+
+    const handleCheckOut = () => {
+        setProcessing(true);
+        router.post(route("admin.check-out"), {}, 
+            { onFinish: () => setProcessing(false) }
+        );
+    };
+
+    const mapCenter = geofence
+        ? [geofence.latitude, geofence.longitude]
+        : [-6.2088, 106.8456]; // default Jakarta
+
     return (
         <AdminLayout>
+
+            {/* FLASH MESSAGE */}
+            {props.flash?.success && (
+                <div className="mb-6 bg-green-100 text-green-700 px-5 py-3 rounded-2xl text-sm">
+                    ✅ {props.flash.success}
+                </div>
+            )}
+            {props.flash?.error && (
+                <div className="mb-6 bg-red-100 text-red-700 px-5 py-3 rounded-2xl text-sm">
+                    ❌ {props.flash.error}
+                </div>
+            )}
 
             {/* HEADER */}
             <div className="flex items-center justify-between mb-8">
@@ -38,16 +92,18 @@ export default function Dashboard({ stats, attendance, weeklyChart }) {
                 </div>
                 <div className="flex gap-4">
                     <button
-                        onClick={() => router.post(route("admin.check-in"))}
-                        className="bg-blue-600 text-white px-6 py-3 rounded-2xl shadow hover:bg-blue-700 transition"
+                        onClick={handleCheckIn}
+                        disabled={processing}
+                        className="bg-blue-600 text-white px-6 py-3 rounded-2xl shadow hover:bg-blue-700 transition disabled:opacity-50"
                     >
-                        Check In
+                        {processing ? "Loading..." : "Check In"}
                     </button>
                     <button
-                        onClick={() => router.post(route("admin.check-out"))}
-                        className="bg-red-500 text-white px-6 py-3 rounded-2xl shadow hover:bg-red-600 transition"
+                        onClick={handleCheckOut}
+                        disabled={processing}
+                        className="bg-red-500 text-white px-6 py-3 rounded-2xl shadow hover:bg-red-600 transition disabled:opacity-50"
                     >
-                        Check Out
+                        {processing ? "Loading..." : "Check Out"}
                     </button>
                 </div>
             </div>
@@ -72,7 +128,7 @@ export default function Dashboard({ stats, attendance, weeklyChart }) {
                 })}
             </div>
 
-            {/* CHART */}
+            {/* CHART + MAP */}
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-8">
                 <div className="xl:col-span-2 bg-white rounded-3xl p-6 shadow-sm">
                     <h2 className="text-2xl font-bold mb-1">Attendance Trends</h2>
@@ -87,11 +143,37 @@ export default function Dashboard({ stats, attendance, weeklyChart }) {
                         </ResponsiveContainer>
                     </div>
                 </div>
+
+                {/* MAP */}
                 <div className="bg-white rounded-3xl p-6 shadow-sm">
-                    <h2 className="text-2xl font-bold mb-2">Active Geofencing</h2>
-                    <p className="text-gray-500 mb-6">Real-time office location</p>
-                    <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl h-72 flex items-center justify-center text-white text-2xl font-bold">
-                        GPS ACTIVE
+                    <h2 className="text-2xl font-bold mb-1">Active Geofencing</h2>
+                    <p className="text-gray-500 mb-4">
+                        {geofence ? geofence.name : "No geofence set"}
+                    </p>
+                    <div className="h-72 rounded-2xl overflow-hidden">
+                        <MapContainer
+                            center={mapCenter}
+                            zoom={16}
+                            style={{ height: "100%", width: "100%" }}
+                            scrollWheelZoom={false}
+                        >
+                            <TileLayer
+                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                attribution="© OpenStreetMap contributors"
+                            />
+                            {geofence && (
+                                <>
+                                    <Marker position={[geofence.latitude, geofence.longitude]}>
+                                        <Popup>{geofence.name}</Popup>
+                                    </Marker>
+                                    <Circle
+                                        center={[geofence.latitude, geofence.longitude]}
+                                        radius={geofence.radius}
+                                        pathOptions={{ color: "blue", fillColor: "#93c5fd", fillOpacity: 0.3 }}
+                                    />
+                                </>
+                            )}
+                        </MapContainer>
                     </div>
                 </div>
             </div>

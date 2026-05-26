@@ -105,4 +105,9 @@ class QrAttendanceController extends Controller
             'Attendance success'
         );
     }
+
+    public function scanner()
+    {
+        return Inertia::render('Admin/QRCode/Scanner');
+    }
 }
