@@ -21,11 +21,11 @@
 
 ##  Preview
 
-![Dashboard](./screenshots/dashboard-preview)
+![Dashboard](public/screenshots/dashboard-preview.png)
 
 ---
 
-## 📌 Tentang Project
+##  Tentang Project
 
 AbsensiProfile adalah aplikasi absensi modern berbasis web yang dibuat menggunakan Laravel 13 dan React Inertia.
 
@@ -42,9 +42,9 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-# ✨ Fitur Utama
+#  Fitur Utama
 
-## 🔐 Authentication
+##  Authentication
 
 - Login
 - Register
@@ -54,7 +54,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-## 📊 Dashboard Analytics
+##  Dashboard Analytics
 
 - Statistik Kehadiran
 - Statistik Karyawan
@@ -64,7 +64,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-## 👨‍💼 Employee Management
+##  Employee Management
 
 - Tambah Karyawan
 - Edit Karyawan
@@ -74,7 +74,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-## 📍 GPS Geofencing
+##  GPS Geofencing
 
 - Live GPS Tracking
 - Validasi Radius Kantor
@@ -85,7 +85,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-## 📷 QR Attendance
+##  QR Attendance
 
 - QR Generator
 - QR Scanner
@@ -94,7 +94,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-## 📅 Attendance System
+##  Attendance System
 
 - Check In
 - Check Out
@@ -104,7 +104,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-## ⏰ Scheduler Otomatis
+##  Scheduler Otomatis
 
 - Auto Check-Out
 - Auto Attendance Monitoring
@@ -113,7 +113,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-## 🎨 Modern UI
+##  Modern UI
 
 - Responsive Design
 - Mobile Friendly
@@ -123,7 +123,7 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-# 🛠️ Framework dan Library Yang Digunakan
+#  Framework dan Library Yang Digunakan
 
 ## Backend
 
@@ -159,57 +159,57 @@ Aplikasi ini dirancang untuk membantu perusahaan melakukan monitoring kehadiran 
 
 ---
 
-# 📸 Dokumentasi
+#  Dokumentasi
 
-## 🏠 Landing Page
+##  Landing Page
 
 Landing page modern dengan tampilan professional company.
 
-![Landing Page](./screenshots/landing-page.png)
+![Landing Page](public/screenshots/landing-page.png)
 
 ---
 
-## 🔐 Login Page
+##  Login Page
 
 Halaman login modern dengan UI professional.
 
-![Login](./screenshots/login-page.png)
+![Login](public/screenshots/login-page.png)
 
 ---
 
-## 📊 Dashboard Admin
+##  Dashboard Admin
 
 Dashboard analytics untuk monitoring absensi dan employee.
 
-![Dashboard](./screenshots/dashboard-admin.png)
+![Dashboard](public/screenshots/dashboard-admin.png)
 
 ---
 
-## 📍 GPS Geofencing
+##  GPS Geofencing
 
 Sistem validasi absensi menggunakan GPS realtime dan radius kantor.
 
-![GPS](./screenshots/geofencing.png)
+![GPS](public/screenshots/geofencing.png)
 
 ---
 
-## 👨‍💼 Employee Management
+##  Employee Management
 
 Manajemen data karyawan realtime.
 
-![Employee](./screenshots/employees.png)
+![Employee](public/screenshots/employees.png)
 
 ---
 
-## 📷 QR Attendance
+##  QR Attendance
 
 QR Code scanner untuk proses absensi.
 
-![QR Attendance](./screenshots/qr-attendance.png)
+![QR Attendance](public/screenshots/qr-attendance.png)
 
 ---
 
-# 📖 Cara Penggunaan
+#  Cara Penggunaan
 
 # A. Persyaratan
 
@@ -334,7 +334,7 @@ http://127.0.0.1:8000
 
 ---
 
-# 👥 Daftar Roles
+#  Daftar Roles
 
 | Role | Akses |
 |------|--------|
@@ -343,7 +343,7 @@ http://127.0.0.1:8000
 
 ---
 
-# 📂 Import Data dari CSV
+#  Import Data dari CSV
 
 Admin dapat melakukan import employee menggunakan file CSV.
 
@@ -367,9 +367,9 @@ Jane Doe,jane@example.com,Manager
 
 ---
 
-# ⚙️ Konfigurasi
+#  Konfigurasi
 
-## 📍 GPS Radius
+##  GPS Radius
 
 Radius kantor dapat diubah melalui menu:
 
@@ -379,13 +379,13 @@ Admin > GPS Geofencing
 
 ---
 
-## 🗺️ Office Location
+##  Office Location
 
 Lokasi kantor dapat dipindahkan secara realtime melalui map GPS.
 
 ---
 
-## ⚙️ Environment
+##  Environment
 
 Konfigurasi utama berada pada file:
 
@@ -395,7 +395,7 @@ Konfigurasi utama berada pada file:
 
 ---
 
-# 🗄️ Database Seeder
+#  Database Seeder
 
 Seeder digunakan untuk membuat data awal aplikasi.
 
@@ -428,7 +428,7 @@ Tabel utama:
 
 ---
 
-# ⏰ Scheduler Otomatis
+#  Scheduler Otomatis
 
 AbsensiProfile mendukung fitur scheduler otomatis untuk menjalankan proses tertentu secara realtime tanpa harus dijalankan manual.
 
@@ -490,7 +490,7 @@ Schedule::call(function () {
 
 ---
 
-# 📊 Feature Status
+#  Feature Status
 
 | Feature | Status |
 |----------|--------|
@@ -504,7 +504,7 @@ Schedule::call(function () {
 
 ---
 
-# 📌 Kesimpulan
+#  Kesimpulan
 
 AbsensiProfile adalah aplikasi absensi modern berbasis Laravel dan React yang dirancang untuk membantu perusahaan melakukan monitoring kehadiran secara realtime.
 
@@ -520,7 +520,7 @@ Project ini juga dapat dikembangkan lebih lanjut menjadi:
 
 ---
 
-# 🤝 Contributing
+#  Contributing
 
 Kontribusi terbuka untuk pengembangan project ini.
 
@@ -533,15 +533,15 @@ Jika menemukan bug atau memiliki ide pengembangan:
 
 ---
 
-# 👨‍💻 Developer
+#  Developer
 
 Developed by:
 
-### Thoriq Mplh
+### Thoriq Muplih farikhin
 
 ---
 
-# 📄 License
+#  License
 
 This project is licensed under the MIT License.
 
